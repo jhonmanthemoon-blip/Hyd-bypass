@@ -195,7 +195,7 @@ end
 
 local function label(parent, text, size, col, font, pos, sz, xAlign)
 	return make("TextLabel", {
-		BackgroundTransparency = 1,
+		BackgroundTransparency = 0,
 		Text = text,
 		TextSize = size,
 		TextColor3 = col,
