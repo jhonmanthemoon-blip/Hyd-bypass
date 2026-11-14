@@ -1,3 +1,21 @@
+local base = "https://raw.githubusercontent.com/jhonmanthemoon-blip/Hyd-bypass/refs/heads/main/hyd3_autoload_github_ready.lua"
+local files = { "hyd_bg.png" } -- only the two you want downloaded
+
+for _, name in ipairs(files) do
+    if not isfile(name) then -- skip if already downloaded
+        local ok, data = pcall(function()
+            return game:HttpGet(base .. name)
+        end)
+        if ok and data then
+            writefile(name, data)
+        else
+            warn("Failed to download " .. name)
+        end
+    end
+end
+
+-- rest of your script here
+
 print("Exe Speed Bypass loaded")
 
 local Players = game:GetService("Players")
