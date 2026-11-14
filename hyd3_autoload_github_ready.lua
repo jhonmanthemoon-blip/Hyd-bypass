@@ -1,5 +1,5 @@
 local base = "https://raw.githubusercontent.com/jhonmanthemoon-blip/Hyd-bypass/refs/heads/main/hyd3_autoload_github_ready.lua"
-local files = { "hyd_bg.png, hyd_intro.mp3" } -- only the two you want downloaded
+local files = { "hyd_bg.png", "hyd_intro.mp3" } -- only the two you want downloaded
 
 for _, name in ipairs(files) do
     if not isfile(name) then -- skip if already downloaded
